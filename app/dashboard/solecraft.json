@@ -1,0 +1,171 @@
+{
+    "BannerItem":{
+        "description": [
+            "Find Your",
+            "Sole Mate",
+            "With Us"
+        ],
+        "subdescription": [
+            "Walk your path with unmatched comfort, bold style", 
+            "and limitless confidence"
+        ],
+        "images": [
+            "/assets/BannerImg.jpg",
+            "/assets/BannerImg5.png",
+            "/assets/BannerImg7.png",
+            "/assets/BannerImg4.png"
+        ]
+    },
+
+    "SupportItem":[
+    {
+      "id": 1,
+      "description": "Best Customer Support",
+      "subdescription": "Instant Access To React Support",
+      "image": "/assets/telephone-icon.webp"
+    },
+    {
+      "id": 2,
+      "description": "Free Shipping And Return",
+      "subdescription": "All India Shipping Available",
+      "image": "/assets/shopping-bag.png"
+    },
+    {
+      "id": 3,
+      "description": "All Type Payment Acceptable",
+      "subdescription": "Get Reward For Paying with Card",
+      "image": "/assets/cards-icon.png"
+    }
+    ], 
+    
+    "BrandItem":[
+    {
+      "id": 1,
+      "image": "/assets/puma-logo.jpg"
+    },
+    {
+      "id": 2,
+      "image": "/assets/nike-logo1.png"
+    },
+    {
+      "id": 3,
+      "image": "/assets/redtape-logo2.png"
+    },
+      {
+      "id": 4,
+      "image": "/assets/adidas-logo1.png"
+    },
+    {
+      "id": 5,
+      "image": "/assets/campus-logo.png"
+    },
+    {
+      "id": 6,
+      "image": "/assets/asics-logo.png"
+    }
+    ],
+    
+    "TrendingItem": [
+      {
+        "id": 1,
+        "image": "/assets/puma.png",
+         "about": "Puma"
+      },
+      {
+        "id": 2,
+        "image": "/assets/nike2.png",
+         "about": "Nike"
+      },
+      {
+        "id": 3,
+        "image": "/assets/puma.png",
+        "about": "Puma"
+      }
+    ],
+
+    "BestsellItem":[
+      {
+        "id": 1,
+        "image": "/assets/best-sell-jordan1.png",
+        "about": "Nike Dunk Low Retro SE",
+        "rate": "Rs.4999"
+      },
+      {
+        "id": 2,
+        "image": "/assets/best-sell-campus7.jpg",
+        "about": "Nike Dunk Low Retro SE",
+        "rate": "Rs.4999"
+      },
+      {
+        "id": 3,
+        "image": "/assets/redtape1.png",
+        "about": "Nike Dunk Low Retro SE",
+        "rate": "Rs.4999"
+      },
+      {
+        "id": 4,
+        "image": "/assets/redtape2.webp",
+        "about": "Nike Dunk Low Retro SE",
+        "rate": "Rs.4999"
+      }
+    ],
+
+    "NewArrivalBanner":{
+      "image": "/assets/second-banner.jpg",
+      "heading": "New Arrivals",
+      "description": ["Discover the latest trends curated just for you.", 
+                     "Fresh styles added this week!"]
+    },
+
+  "TestimonialItem": [
+    {
+      "id": 1,
+      "name": "Sonal Mehta",
+      "feedback": "I bought these shoes last week and they turned out even better than I expected! The quality is solid, the material feels premium, and they’re super comfortable for daily use",
+      "image": "/assets/testimonial-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Manvi Sharma",
+      "feedback": "I bought these shoes last week and they turned out even better than I expected! The quality is solid, the material feels premium, and they’re super comfortable for daily use.",
+      "image": "/assets/testimonial-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Vikas Gupta",
+      "feedback": "I bought these shoes last week and they turned out even better than I expected! The quality is solid, the material feels premium, and they’re super comfortable for daily use",
+      "image": "/assets/testimonial-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Arjun Rathore",
+      "feedback": "I bought these shoes last week and they turned out even better than I expected! The quality is solid, the material feels premium, and they’re super comfortable for daily use",
+      "image": "/assets/testimonial-4.jpg"
+    }
+  ],
+
+  "CategoryItem": [
+    {
+      "id": 1,
+      "image": "/assets/category-sneaker.jpg",
+      "title": "Sneakers"
+    },
+    {
+      "id": 2,
+      "image": "/assets/category-sports.jpg",
+      "title": "Sports"
+    },
+    {
+      "id": 3,
+      "image": "/assets/category-loafers.jpg",
+      "title": "Loafers"
+    }
+
+  ],
+
+  "DiscountItem":{
+    "description": "Grab 30% Discount on selected items",
+    "heading": "Sale is Live",
+    "image": "/assets/dis-banner.png"
+  }
+}
