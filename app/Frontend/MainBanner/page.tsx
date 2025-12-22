@@ -37,15 +37,7 @@ export default function MainBanner(){
     
 <section className="container h-screen">
   <div className="flex flex-col md:grid md:grid-cols-2 h-full">
-     <div className="md:px-28 px-6 h-1/2 md:h-auto flex flex-col justify-center">
-      {Data.BannerItem.description.map((line, index) => (
-        <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
-      ))}
-      {Data.BannerItem.subdescription.map((line, index) => (
-        <p key={index} className="md:text-xl text-gray-700">{line}</p>
-      ))}
-    </div>
-    <div className="relative h-1/2 md:h-screen overflow-hidden">
+     <div className="relative h-1/2 md:h-screen overflow-hidden">
       <Image
         src={images[index]}
         alt="Banner Image"
@@ -53,6 +45,14 @@ export default function MainBanner(){
         unoptimized
         className="object-cover"
       />
+    </div>
+    <div className="md:px-28 px-6 h-1/2 md:h-auto flex flex-col justify-center">
+      {Data.BannerItem.description.map((line, index) => (
+        <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
+      ))}
+      {Data.BannerItem.subdescription.map((line, index) => (
+        <p key={index} className="md:text-xl text-gray-700">{line}</p>
+      ))}
     </div>
   </div>
 </section>
