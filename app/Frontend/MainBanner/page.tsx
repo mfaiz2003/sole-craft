@@ -33,47 +33,47 @@ export default function MainBanner(){
 
     <div className="">
       <Header/>
+    </div>   
+    
+<section className="container h-screen">
+  <div className="flex flex-col md:grid md:grid-cols-[50%_50%] h-full">
+     <div className="md:px-28 px-6 h-1/2 md:h-auto flex flex-col justify-center">
+      {Data.BannerItem.description.map((line, index) => (
+        <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
+      ))}
+      {Data.BannerItem.subdescription.map((line, index) => (
+        <p key={index} className="md:text-xl text-gray-700">{line}</p>
+      ))}
     </div>
+    <div className="relative h-1/2 md:h-screen overflow-hidden">
+      <Image
+        src={images[index]}
+        alt="Banner Image"
+        fill
+        unoptimized
+        className="object-cover"
+      />
+    </div>
+  </div>
+</section>
 
-    
-    
-      <section className="container ">        
-        <div className="grid md:grid-cols-2 grid-cols-1 md:pt-0 pt-30 items-center">
-          <div className="md:px-28 px-6 md:h-0 h-80 ">
-            {Data.BannerItem.description.map((line, index) => (
-              <h3 key={index} className="md:text-8xl text-6xl font-bold md:-translate-y-45">{line}</h3>
-            ))}
-            {Data.BannerItem.subdescription.map((line, index) =>(
-              <p key={index} className="md:text-xl text-gray-700 md:-translate-y-40">{line}</p>
-            ))} 
-          </div>
-          <div className="md:h-screen h-120 relative overflow-hidden">
-          <h1 className="relative md:top-80 md:left-[-347] md:-translate-y-1/2 md:rotate-270 z-10 md:text-[115px] text-7xl
-          font-extrabold text-white ">ULTIMATE</h1>
-          <div>
-            <Image src={images[index]} alt="Banner Image"
-            fill
-            unoptimized
-            className="object-cover" />
-          </div>  
-          </div>  
-        </div>
-      </section>
 
       {/* support & Brand section */}
 
-      <section className="container bg-linear-to-b from-violet-300 via-violet-200 py-15">
-        <div className="text-center text-white font-semibold text-5xl ">
+      <section className="container bg-linear-to-b from-violet-100 via-violet-200 py-15">
+        <div className="text-center font-semibold text-5xl ">
           <h3>Shop By Brands</h3>
         </div>
-        <div className="grid md:grid-cols-6 grid-cols-3 gap-10 mt-10 md:px-28 px-6 md:py-0 py-3 bg-black"> 
+       <div className="grid md:grid-cols-6 grid-cols-3 gap-10 mt-10 md:px-28 px-6 md:py-0 py-3 bg-black">
           {Data.BrandItem.map((items) => (
-            <div key={items.id} className="flex gap-7 md:h-0 h-15">
+            <div key={items.id} className="flex justify-center items-center">
               <Image
                 src={items.image}
                 alt="brand-card"
                 width={90}
-                height={60} className="relative object-contain"/>
+                height={60}
+                className="object-contain"
+              />
             </div>
           ))}
         </div>

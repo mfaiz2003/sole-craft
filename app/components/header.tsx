@@ -4,7 +4,7 @@ import CartIcon from "@/public/assets/cart-icon.png";
 export default function Header(){
     return(
         <section>
-            <div className="absolute z-10 flex mt-3 justify-between w-full pl-18 pr-18">
+            <div className="absolute hidden z-10 flex mt-3 justify-between w-full pl-18 pr-18">
                 <div className="font-extrabold text-2xl">
                     <h3>SoleCraft</h3>    
                 </div>
