@@ -1,5 +1,5 @@
 type CategoryProps = {
-  className?: string; // optional string
+  className?: string; 
 };
 
 export default function Category({ className }: CategoryProps) {

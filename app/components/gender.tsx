@@ -1,5 +1,5 @@
 type GenderProps = {
-  className?: string; // optional string
+  className?: string; 
 };
 
 export default function Gender({ className }: GenderProps) {

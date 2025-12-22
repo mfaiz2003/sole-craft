@@ -41,10 +41,10 @@ export default function MainBanner(){
         <div className="grid md:grid-cols-2 grid-cols-1 md:pt-0 pt-30 items-center">
           <div className="md:px-28 px-6 md:h-0 h-80 ">
             {Data.BannerItem.description.map((line, index) => (
-              <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
+              <h3 key={index} className="md:text-8xl text-6xl font-bold md:-translate-y-45">{line}</h3>
             ))}
             {Data.BannerItem.subdescription.map((line, index) =>(
-              <p key={index} className="md:text-xl text-gray-700 translate-y-8">{line}</p>
+              <p key={index} className="md:text-xl text-gray-700 md:-translate-y-40">{line}</p>
             ))} 
           </div>
           <div className="md:h-screen h-120 relative overflow-hidden">
@@ -62,16 +62,16 @@ export default function MainBanner(){
 
       {/* support & Brand section */}
 
-      <section className="container bg-linear-to-b from-violet-400 via-violet-200 py-15">
+      <section className="container bg-linear-to-b from-violet-300 via-violet-200 py-15">
         <div className="text-center text-white font-semibold text-5xl ">
           <h3>Shop By Brands</h3>
         </div>
-        <div className="grid md:grid-cols-6 grid-cols-3 gap-10 mt-10 md:px-28 px-6 md:py-0 py-10 bg-black"> 
+        <div className="grid md:grid-cols-6 grid-cols-6 gap-10 mt-10 md:px-28 px-6 bg-black"> 
           {Data.BrandItem.map((items) => (
-            <div key={items.id} className="flex gap-7">
+            <div key={items.id} className="flex gap-7 md:h-0 h-20">
               <Image
                 src={items.image}
-                alt="service-card"
+                alt="brand-card"
                 width={90}
                 height={60} className="relative object-contain"/>
             </div>
