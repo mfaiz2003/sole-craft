@@ -37,7 +37,7 @@ export default function MainBanner(){
       <section className="container min-h-screen">
         <Snowfall color="black" />
         <div className="flex flex-col md:grid md:grid-cols-2 h-full">
-           <div className="relative min-h-[50vh] md:h-screen overflow-hidden">
+           <div className="relative min-h-[40vh] md:h-screen overflow-hidden">
             <Image
               src={images[index]}
               alt="Banner Image"
@@ -46,7 +46,7 @@ export default function MainBanner(){
               className="object-cover"
             />
           </div>
-          <div className="md:px-28 px-6 min-h-[50vh] md:h-auto flex flex-col justify-center">
+          <div className="md:px-28 px-6 min-h-[60vh] md:h-auto flex flex-col justify-center">
             {Data.BannerItem.description.map((line, index) => (
               <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
             ))}
