@@ -88,7 +88,7 @@ export default function MainBanner(){
         </div>
         <div className="grid md:grid-cols-3 grid-cols-2 gap-4 w-full">
           {Data.TrendingItem.map((items) => (
-            <div key={items.id} className="border border-gray-300 rounded-2xl overflow-hidden bg-white
+            <div key={items.id} className="border border-gray-300 overflow-hidden bg-white
              flex flex-col items-center shadow-xl hover:scale-110 hover:transition-transform duration-500">
             <div className="md:h-64 h-40">
               <Image src={items.image} alt="puma-image"
@@ -139,7 +139,7 @@ export default function MainBanner(){
           {Data.BestsellItem.map((items) => (
             <div
               key={items.id}
-              className="border border-gray-300 rounded-xl shadow-xl overflow-hidden
+              className="border border-gray-300 shadow-xl overflow-hidden
               text-center mt-5 bg-white hover:scale-110 hover:transition-transform duration-500">
               <div className="h-64 overflow-hidden">
                 <Image
@@ -209,7 +209,7 @@ export default function MainBanner(){
         </div>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-10">
           {Data.CategoryItem.map((items) => (
-            <div key={items.id} className="w-full relative md:h-86 h-60 rounded-xl border border-gray-50 backdrop-blur-sm
+            <div key={items.id} className="w-full relative md:h-86 h-60 border border-gray-50 backdrop-blur-sm
              overflow-hidden bg-white hover:scale-105 transition-transform duration-300 shadow-xl">
               <Image src={items.image} alt="category-image"
               height={400}

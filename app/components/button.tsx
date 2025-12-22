@@ -5,7 +5,7 @@ type ButtonProps = {
 export default function Button({ className }: ButtonProps) {
   return (
     <button
-      className={`bg-black md:px-6 md:py-4 px-2 py-2 md:text-lg text-sm py-2 rounded-lg hover:scale-110
+      className={`bg-black md:px-6 md:py-4 px-2 py-2 md:text-lg text-sm hover:scale-110
         hover:transition-transform duration-500 hover:shadow-2xl ${className}`}
     >
       Shop Now

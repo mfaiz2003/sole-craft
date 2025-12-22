@@ -37,7 +37,7 @@ export default function Carousel({ items }: CarouselProps) {
     >
       {items.map((item: TestimonialItem) => (
         <SwiperSlide key={item.id}>
-          <div className="bg-white border border-gray-300 h-68 rounded-xl shadow-lg flex flex-col 
+          <div className="bg-white border border-gray-300 h-68 shadow-lg flex flex-col 
           items-center justify-center text-center overflow-hidden px-4">
             
             {item.image && (
