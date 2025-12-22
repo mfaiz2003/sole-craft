@@ -81,22 +81,22 @@ export default function MainBanner(){
 
         <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:pt-15 pt-5">
         <div className="py-5 w-auto">
-          <h5 className="text-2xl text-gray-700">Our Trending shoe</h5>
-          <h3 className=" font-bold md:text-6xl text-5xl ">Most Popular<br /> Products</h3>
-          <p className="text-xl text-gray-700">Top trending products everyone’s buying</p>
+          <h5 className="md:text-2xl text-lg text-gray-700">Our Trending shoe</h5>
+          <h3 className=" font-bold md:text-6xl text-4xl ">Most Popular<br /> Products</h3>
+          <p className="md:text-2xl text-lg text-gray-700">Top trending products everyone’s buying</p>
           <Button className="md:mt-10 mt-5 text-white"/>
         </div>
         <div className="grid md:grid-cols-3 grid-cols-2 gap-4 w-full">
           {Data.TrendingItem.map((items) => (
             <div key={items.id} className="border border-gray-300 rounded-2xl overflow-hidden bg-white
              flex flex-col items-center shadow-xl hover:scale-110 hover:transition-transform duration-500">
-            <div className="md:h-64 h-48">
+            <div className="md:h-64 h-40">
               <Image src={items.image} alt="puma-image"
               height={250}
               width={250}
               className="object-cover"/>
             </div>
-            <div className="text-xl font-bold">
+            <div className="md:text-xl text-lg font-bold">
               <p>{items.about}</p>
             </div>
           </div>
