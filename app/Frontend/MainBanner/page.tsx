@@ -79,7 +79,7 @@ export default function MainBanner(){
           <h3>Shop By Brands</h3>
         </div>
 
-        <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:pt-15 pt-5">
+        <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:pt-15">
         <div className="py-5 w-auto">
           <h5 className="md:text-2xl text-lg text-gray-700">Our Trending shoe</h5>
           <h3 className=" font-bold md:text-6xl text-4xl ">Most Popular<br /> Products</h3>
@@ -89,14 +89,17 @@ export default function MainBanner(){
         <div className="grid md:grid-cols-3 grid-cols-2 gap-4 w-full">
           {Data.TrendingItem.map((items) => (
             <div key={items.id} className="border border-gray-300 overflow-hidden bg-white
-             flex flex-col items-center shadow-xl hover:scale-110 hover:transition-transform duration-500">
-            <div className="md:h-64 h-40">
-              <Image src={items.image} alt="puma-image"
-              height={250}
-              width={250}
-              className="object-cover"/>
+             flex flex-col items-center shadow-xl hover:scale-110 hover:transition-transform duration-500 md:py-0 py-2">
+           <div className="relative md:h-64 h-36 w-full">
+              <Image
+                src={items.image}
+                alt="puma-image"
+                fill
+                unoptimized
+                className="object-cover"
+              />
             </div>
-            <div className="md:text-xl text-lg font-bold">
+            <div className="md:text-xl text-lg font-bold ">
               <p>{items.about}</p>
             </div>
           </div>
@@ -108,15 +111,15 @@ export default function MainBanner(){
     {/* Discount section */}
 
     <section className="mt-10 bg-black">
-      <div className="grid md:grid-cols-[70%_30%] grid-cols-[80%-20%]">
-        <div className="md:h-62 h-50 w-full flex justify-center items-center overflow-hidden">
+      <div className="grid md:grid-cols-[70%_30%] grid-cols-2 md:h-55 h-50">
+        <div className="w-full flex justify-center items-center overflow-hidden">
           <Image src={Data.DiscountItem.image} alt="Second-Banner" 
            height={1000}
            width={1000}
           className="object-cover w-full"
           />
         </div>
-        <div className="flex flex-col justify-center md:px-10 px-6 md:my-0 my-5">
+        <div className="flex flex-col justify-center md:px-10 px-6">
          <h3 className="md:text-5xl text-3xl font-bold text-white">{Data.DiscountItem.heading}</h3>
          <p className="md:text-xl text-lg text-white">{Data.DiscountItem.description}</p>
         <div>
@@ -131,34 +134,38 @@ export default function MainBanner(){
       
       <section className="container py-15 bg-linear-to-t via-violet-50 ">
         <div className="relative">
-        <h2 className="text-center text-5xl font-bold mask-b-from-black-500">
+        <h2 className="text-center md:text-5xl text-3xl font-bold mask-b-from-black-500">
           Best Selling Catalogue
         </h2>      
         <Gender className="flex justify-center" />      
-        <div className="grid md:grid-cols-4 grid-cols-2 md:gap-4 gap-6 mt-10 md:px-28 px-6 relative z-10">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-6 mt-10 md:px-28 px-6 relative z-10">
           {Data.BestsellItem.map((items) => (
             <div
               key={items.id}
               className="border border-gray-300 shadow-xl overflow-hidden
               text-center mt-5 bg-white hover:scale-110 hover:transition-transform duration-500">
-              <div className="h-64 overflow-hidden">
+              <div className="relative h-40 md:h-64  overflow-hidden">
                 <Image
                   src={items.image}
                   alt="best-sell-image"
-                  height={200}
-                  width={200}
+                  fill
+                  unoptimized
                   className="object-cover w-full"
                 />
               </div>      
-              <div className="grid md:grid-cols-[70%_30%] grid-cols-2">
-                <div className="px-4 py-4 flex flex-col items-start">
-                  <p className="truncate font-bold">{items.about}</p>
-                  <span className="text-gray-600">{items.rate}</span>
-                </div>      
-                <div className="flex items-center justify-center">
+            <div className="grid grid-cols-[1fr_auto]">
+              <div className="px-4 py-3 min-w-0">
+                <p className="truncate w-full font-semibold">
+                  {items.about}
+                </p>
+                <span className="text-gray-600 text-sm">
+                  {items.rate}
+                </span>
+              </div>
+                <div className="pr-4 flex items-center">
                   <ForwardIcon />
                 </div>
-              </div>      
+              </div>
             </div>
           ))}
         </div>
@@ -180,11 +187,11 @@ export default function MainBanner(){
           <div className="absolute inset-0 bg-black/60"></div>
           <div className="grid md:grid-cols-2 grid-cols-1 absolute z-10 md:px-28 px-6">
              <div className="w-full md:mt-35 mt-5">
-              <h2 className="text-white md:text-7xl text-6xl font-bold mask-b-from-slate-100 ">
+              <h2 className="text-white md:text-7xl text-4xl font-bold mask-b-from-slate-100 ">
                 {Data.NewArrivalBanner.heading}
               </h2>
               {Data.NewArrivalBanner.description.map((line, index) => (
-                <p key={index}className="text-gray-200 md:text-xl text-md ">{line}</p>
+                <p key={index}className="text-gray-200 md:text-xl text-sm">{line}</p>
               ))} 
               <div>
                 <Button className="md:mt-15 mt-5 bg-white text-black hover:bg-amber-300 hover:rounded-2xl"/>
