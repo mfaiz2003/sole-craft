@@ -17,8 +17,8 @@ export default function Header(){
                     </ul>
                 </div>
                 <div className="flex gap-5">
-                    <Image src={CartIcon} alt="cart-icon" className="-translate-y-1 w-8 h-8" />
-                    <div className="text-white bg-black pl-4 pr-4 flex items-center">
+                    <a href="#"><Image src={CartIcon} alt="cart-icon" className="-translate-y-1 w-8 h-8 hover:scale-110" /></a>
+                    <div className="text-white bg-black pl-4 pr-4 flex items-center hover:text-lg hover:bg-white hover:text-black">
                         <button>LogIn</button>
                     </div>
                 </div>
