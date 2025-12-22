@@ -34,7 +34,7 @@ export default function MainBanner(){
       <Header/>
     </div>   
     
-      <section className="container h-screen">
+      <section className="container min-h-screen">
         <Snowfall color="black" />
         <div className="flex flex-col md:grid md:grid-cols-2 h-full">
            <div className="relative h-1/2 md:h-screen overflow-hidden">
@@ -70,7 +70,7 @@ export default function MainBanner(){
                 alt="brand-card"
                 width={90}
                 height={60}
-                className="object-contain md:h-0 h-10"
+                className="object-contain md:h-25 h-10"
               />
             </div>
           ))}
