@@ -36,7 +36,7 @@ export default function MainBanner(){
     </div>   
     
 <section className="container h-screen">
-  <div className="flex flex-col md:grid md:grid-cols-[50%_50%] h-full">
+  <div className="flex flex-col md:grid md:grid-cols-2 h-full">
      <div className="md:px-28 px-6 h-1/2 md:h-auto flex flex-col justify-center">
       {Data.BannerItem.description.map((line, index) => (
         <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
@@ -60,11 +60,11 @@ export default function MainBanner(){
 
       {/* support & Brand section */}
 
-      <section className="container bg-linear-to-b from-violet-100 via-violet-200 py-15">
-        <div className="text-center font-semibold text-5xl ">
+      <section className="container bg-linear-to-b via-violet-200 md:py-15 py-6">
+        <div className="text-center font-semibold md:text-5xl text-3xl ">
           <h3>Shop By Brands</h3>
         </div>
-       <div className="grid md:grid-cols-6 grid-cols-3 gap-10 mt-10 md:px-28 px-6 md:py-0 py-3 bg-black">
+       <div className="grid md:grid-cols-6 grid-cols-3 gap-10 md:mt-10 mt-5 md:px-28 px-6 md:py-0 py-3 bg-black">
           {Data.BrandItem.map((items) => (
             <div key={items.id} className="flex justify-center items-center">
               <Image
@@ -77,7 +77,7 @@ export default function MainBanner(){
             </div>
           ))}
         </div>
-        <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 pt-15">
+        <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:pt-15 pt-5">
         <div className="pt-5 pb-5 w-auto">
           <h5 className="text-2xl text-gray-700">Our Trending shoe</h5>
           <h3 className=" font-bold md:text-6xl text-5xl ">Most Popular<br /> Products</h3>
