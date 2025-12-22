@@ -66,9 +66,9 @@ export default function MainBanner(){
         <div className="text-center text-white font-semibold text-5xl ">
           <h3>Shop By Brands</h3>
         </div>
-        <div className="grid md:grid-cols-6 grid-cols-6 gap-10 mt-10 md:px-28 px-6 bg-black"> 
+        <div className="grid md:grid-cols-6 grid-cols-3 gap-10 mt-10 md:px-28 px-6 md:py-0 py-3 bg-black"> 
           {Data.BrandItem.map((items) => (
-            <div key={items.id} className="flex gap-7 md:h-0 h-20">
+            <div key={items.id} className="flex gap-7 md:h-0 h-15">
               <Image
                 src={items.image}
                 alt="brand-card"
