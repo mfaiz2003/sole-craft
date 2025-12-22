@@ -60,11 +60,9 @@ export default function MainBanner(){
 
       {/* support & Brand section */}
 
-      <section className="container bg-linear-to-b via-violet-200 md:py-15 py-6">
-        <div className="text-center font-semibold md:text-5xl text-3xl ">
-          <h3>Shop By Brands</h3>
-        </div>
-       <div className="grid md:grid-cols-6 grid-cols-3 gap-10 md:mt-10 mt-5 md:px-28 px-6 md:py-0 py-3 bg-black">
+      <section className="container bg-linear-to-b via-violet-200 ">
+    
+       <div className="grid md:grid-cols-6 grid-cols-3 gap-10 md:px-28 px-6 md:py-0 py-3 bg-black">
           {Data.BrandItem.map((items) => (
             <div key={items.id} className="flex justify-center items-center">
               <Image
@@ -76,6 +74,9 @@ export default function MainBanner(){
               />
             </div>
           ))}
+        </div>
+        <div className="text-center font-bold md:text-5xl text-3xl md:mt-10 mt-5">
+          <h3>Shop By Brands</h3>
         </div>
         <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:pt-15 pt-5">
         <div className="pt-5 pb-5 w-auto">
