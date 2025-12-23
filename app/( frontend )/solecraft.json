@@ -172,5 +172,28 @@
     "image1": "/assets/category-loafers.jpg",
     "image2": "/assets/nike-logo1.png",
     "image3":  "/assets/nike-banner.png"
-  }
+  },
+
+  "ProductImage":[
+    {
+      "id": 1,
+      "image": "/assets/nike-banner.png"
+    },
+    {
+      "id": 2,
+      "image": "/assets/best-sell-jordan1.png"
+    },
+    {
+      "id": 3,
+      "image": "/assets/puma.png"
+    },
+    {
+      "id": 4,
+      "image": "/assets/best-sell-jordan3.jpg"
+    },
+    {
+      "id": 5,
+      "image": "/assets/bannershoes.png"
+    }
+  ]
 }

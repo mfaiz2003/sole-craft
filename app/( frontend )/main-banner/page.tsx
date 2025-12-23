@@ -112,7 +112,7 @@ export default function MainBanner(){
     {/* Discount section */}
 
     <section className="mt-10 bg-black">
-      <div className="grid md:grid-cols-[70%_30%] grid-cols-2 md:h-55 h-50">
+      <div className="grid md:grid-cols-[70%_30%] grid-cols-2 md:h-70 h-50">
         <div className="w-full flex justify-center items-center overflow-hidden">
           <Image src={Data.DiscountItem.image} alt="Second-Banner" 
            height={1000}
@@ -176,7 +176,7 @@ export default function MainBanner(){
     {/* Second-Banner-section */}
 
     <section className="container bg-gray-300">
-          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 h-auto w-full">
+          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 md:h-120 w-full">
              <div className="w-full md:mt-35 mt-5">
               <h2 className="md:text-7xl text-3xl font-bold mask-b-from-slate-100 ">
                 {Data.NewArrivalBanner.heading}
@@ -188,10 +188,10 @@ export default function MainBanner(){
                 <Button className="md:mt-15 mt-3 bg-white text-black hover:bg-amber-300 hover:rounded-2xl"/>
               </div>
             </div>
-            <div className="md:mt-0 mt-5">
+            <div className="md:mt-0 mt-5 items-center flex justify-center md:py-8">
               <Image src={Data.NikeItem.image3} alt="arrival-image" 
-              height={700}
-              width={700}
+              height={500}
+              width={500}
               className="object-contain"/>
             </div>
            </div>
