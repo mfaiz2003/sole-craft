@@ -1,4 +1,4 @@
-import MainBanner from "./Frontend/MainBanner/page";
+import MainBanner from "./( frontend )/main-banner/page";
 
 export default function Home() {
   return (

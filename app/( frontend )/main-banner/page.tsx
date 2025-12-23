@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Data from "../solecraft.json";
 import {
@@ -8,7 +9,6 @@ import {
   Header,
   Gender,
   Carousel,
-  ForwardIcon,
   NewsLetter
 } from "@/app/components";
 import Snowfall from "react-snowfall";
@@ -24,18 +24,18 @@ export default function MainBanner(){
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images]);
 
+  const router = useRouter();
 
     return(
     <>  
-
-    <div className="">
-      <Header/>
-    </div>   
     
       <section className="container min-h-screen">
-        <Snowfall color="black" />
+      <div className="bg-gray-300 relative">
+        <Header/>
+      </div>
+
         <div className="flex flex-col md:grid md:grid-cols-2 h-full">
            <div className="relative min-h-[40vh] md:h-screen overflow-hidden">
             <Image
@@ -47,6 +47,7 @@ export default function MainBanner(){
             />
           </div>
           <div className="md:px-28 px-6 min-h-[60vh] md:h-auto flex flex-col justify-center">
+          <Snowfall color="black" />
             {Data.BannerItem.description.map((line, index) => (
               <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
             ))}
@@ -75,16 +76,16 @@ export default function MainBanner(){
             </div>
           ))}
         </div>
-        <div className="text-center font-bold md:text-5xl text-3xl md:mt-10 mt-5">
+        <div className="text-center font-bold text-gray-700 md:text-5xl text-3xl md:mt-10 mt-5">
           <h3>Shop By Brands</h3>
         </div>
 
         <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:pt-15">
         <div className="py-5 w-auto">
-          <h5 className="md:text-2xl text-lg text-gray-700">Our Trending shoe</h5>
-          <h3 className=" font-bold md:text-6xl text-4xl ">Most Popular<br /> Products</h3>
+          <h5 className="md:text-2xl text-lg text-gray-700 ">Our Trending shoe</h5>
+          <h3 className=" font-bold md:text-6xl text-4xl text-gray-700">Most Popular<br /> Products</h3>
           <p className="md:text-2xl text-lg text-gray-700">Top trending products everyone’s buying</p>
-          <Button className="md:mt-10 mt-5 text-white"/>
+          <Button onClick={() => router.push ("/nike")} className="md:mt-10 mt-5 text-white"/>
         </div>
         <div className="grid md:grid-cols-3 grid-cols-2 gap-4 w-full">
           {Data.TrendingItem.map((items) => (
@@ -134,17 +135,17 @@ export default function MainBanner(){
       
       <section className="container py-15 bg-linear-to-t via-violet-50 ">
         <div className="relative">
-        <h2 className="text-center md:text-5xl text-3xl font-bold mask-b-from-black-500">
+        <h2 className="text-center md:text-5xl text-2xl font-bold mask-b-from-slate-100">
           Best Selling Catalogue
         </h2>      
-        <Gender className="flex justify-center" />      
+        <Gender className="flex justify-center mt" />      
         <div className="grid md:grid-cols-4 grid-cols-2 gap-6 mt-10 md:px-28 px-6 relative z-10">
           {Data.BestsellItem.map((items) => (
             <div
               key={items.id}
               className="border border-gray-300 shadow-xl overflow-hidden
               text-center mt-5 bg-white hover:scale-110 hover:transition-transform duration-500">
-              <div className="relative h-40 md:h-64  overflow-hidden">
+              <div className="relative h-35 md:h-64  overflow-hidden">
                 <Image
                   src={items.image}
                   alt="best-sell-image"
@@ -153,19 +154,16 @@ export default function MainBanner(){
                   className="object-cover w-full"
                 />
               </div>      
-            <div className="grid grid-cols-[1fr_auto]">
+            <div className="grid">
               <div className="px-4 py-3 min-w-0">
-                <p className="truncate w-full font-semibold">
+                <p className="truncate font-semibold">
                   {items.about}
                 </p>
                 <span className="text-gray-600 text-sm">
                   {items.rate}
                 </span>
               </div>
-                <div className="pr-4 flex items-center">
-                  <ForwardIcon />
-                </div>
-              </div>
+            </div>
             </div>
           ))}
         </div>
@@ -177,42 +175,33 @@ export default function MainBanner(){
 
     {/* Second-Banner-section */}
 
-    <section className="container">
-      <div className="overflow-hidden">
-        <div className="relative h-140 w-full">
-          <Image src={Data.NewArrivalBanner.image} alt="Second-Banner" 
-           fill
-          className="object-cover w-full"
-          />
-          <div className="absolute inset-0 bg-black/60"></div>
-          <div className="grid md:grid-cols-2 grid-cols-1 absolute z-10 md:px-28 px-6">
+    <section className="container bg-gray-300">
+          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 h-auto w-full">
              <div className="w-full md:mt-35 mt-5">
-              <h2 className="text-white md:text-7xl text-4xl font-bold mask-b-from-slate-100 ">
+              <h2 className="md:text-7xl text-3xl font-bold mask-b-from-slate-100 ">
                 {Data.NewArrivalBanner.heading}
               </h2>
               {Data.NewArrivalBanner.description.map((line, index) => (
-                <p key={index}className="text-gray-200 md:text-xl text-sm">{line}</p>
+                <p key={index}className="md:text-xl text-sm">{line}</p>
               ))} 
               <div>
-                <Button className="md:mt-15 mt-5 bg-white text-black hover:bg-amber-300 hover:rounded-2xl"/>
+                <Button className="md:mt-15 mt-3 bg-white text-black hover:bg-amber-300 hover:rounded-2xl"/>
               </div>
             </div>
             <div className="md:mt-0 mt-5">
-              <Image src={Data.DiscountItem.image} alt="arrival-image" 
-              height={1000}
-              width={1000}
+              <Image src={Data.NikeItem.image3} alt="arrival-image" 
+              height={700}
+              width={700}
               className="object-contain"/>
             </div>
            </div>
-        </div>
-      </div>
     </section>
 
     {/* Category-section */}
 
     <section className="container md:px-28 px-6 pt-10 pb-20 ">
         <div className="category-heading">
-          <h3 className="text-5xl font-bold mask-b-from-slate-100 ">Category</h3>
+          <h3 className="md:text-5xl text-2xl font-bold mask-b-from-slate-100">Category</h3>
         </div>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-10">
           {Data.CategoryItem.map((items) => (
@@ -233,7 +222,7 @@ export default function MainBanner(){
     {/* Testimonial-section */}
 
     <section className="container pb-15">
-      <h4 className="text-5xl font-bold text-center mb-12 mask-b-from-slate-100">
+      <h4 className="md:text-5xl text-2xl font-bold text-center mb-12 mask-b-from-slate-100">
         " What's Our Customers Say "
       </h4>
       <div className="w-full md:px-28 px-6">
@@ -243,7 +232,7 @@ export default function MainBanner(){
 
     {/* news-letter section */}
       
-      <section className="bg-linear-to-b from-violet-400 via-violet-200 to-violet-200 mt-10">
+      <section className="bg-linear-to-b from-violet-300 via-violet-200 to-violet-200 mt-10">
         <div>
           <NewsLetter />
         </div>

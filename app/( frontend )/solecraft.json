@@ -91,19 +91,19 @@
       },
       {
         "id": 2,
-        "image": "/assets/best-sell-campus7.jpg",
+        "image": "/assets/best-sell-jordan1.png",
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       },
       {
         "id": 3,
-        "image": "/assets/redtape1.png",
+        "image": "/assets/best-sell-jordan1.png",
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       },
       {
         "id": 4,
-        "image": "/assets/redtape2.webp",
+        "image": "/assets/best-sell-jordan1.png",
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       }
@@ -166,5 +166,11 @@
     "description": "Grab 30% Discount on selected items",
     "heading": "Sale is Live",
     "image": "/assets/dis-banner.png"
+  },
+
+  "NikeItem":{
+    "image1": "/assets/category-loafers.jpg",
+    "image2": "/assets/nike-logo1.png",
+    "image3":  "/assets/nike-banner.png"
   }
 }

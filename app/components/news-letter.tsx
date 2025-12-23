@@ -16,7 +16,7 @@ export default function NewsLetter() {
 
   return (
     <section className="py-15 flex items-center justify-center">
-      <div className="flex flex-col items-center gap-4 bg-white px-20 py-10 shadow-xl rounded-xl">
+      <div className="flex flex-col items-center gap-4 bg-white md:px-20 px-10 py-10 shadow-xl rounded-xl">
         <h4 className="text-2xl font-semibold">Subscribe for Latest Offers</h4>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center gap-3">
@@ -27,7 +27,7 @@ export default function NewsLetter() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="border px-4 py-2 w-96"
+            className="border px-4 py-2 w-auto"
           />
 
           <button type="submit" className="border px-6 py-2 bg-black text-white">
