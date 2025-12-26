@@ -158,8 +158,17 @@
       "id": 3,
       "image": "/assets/category-loafers.jpg",
       "title": "Loafers"
+    },
+    {
+      "id": 4,
+      "image": "/assets/cate-6.jpg",
+      "title": "Casual Wear"
+    },
+    {
+      "id": 5,
+      "image": "/assets/cate-7.jpg",
+      "title": "Party Wear"
     }
-
   ],
 
   "DiscountItem":{
@@ -195,5 +204,21 @@
       "id": 5,
       "image": "/assets/bannershoes.png"
     }
+  ],
+
+  "cateo":[
+    {
+      "id": 1,
+      "image": "/assets/cate-1.png"
+    },
+    {
+      "id": 2,
+      "image": "/assets/cate-2.png"
+    },
+    {
+      "id": 3,
+      "image": "/assets/cate-3.png"
+    }
   ]
+
 }

@@ -27,7 +27,7 @@ export default function Nike(){
                 unoptimized
                 className="object-contain"/>
               </div>
-              <div className="relative flex items-center justify-center mask-b-from-slate-100 text-white md:text-[200px] 
+              <div className="relative flex items-center justify-center text-white md:text-[200px] 
               text-9xl font-bold italic">
                 <h1>Nike</h1>
               </div>
@@ -55,7 +55,7 @@ export default function Nike(){
                   ))}
                 </div>
               </div>
-            <div className="relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+            <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
               <Image
                 src={activeImage}
                 alt="product-image"
@@ -64,7 +64,7 @@ export default function Nike(){
                 className="object-contain"
               />
             </div>
-            <div className="md:px-6 py-6">
+            <div className="md:px-6 py-6 rounded-4xl bg-gray-100">
               <h1 className="md:text-3xl text-2xl font-bold">Air Jordan Dunk High</h1>
               <p className="text-gray-600 mt-3">
                 Premium leather upper with classic Jordan comfort and iconic street style.

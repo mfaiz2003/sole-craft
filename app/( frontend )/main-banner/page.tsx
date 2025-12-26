@@ -121,10 +121,10 @@ export default function MainBanner(){
           />
         </div>
         <div className="flex flex-col justify-center md:px-10 px-6">
-         <h3 className="md:text-5xl text-3xl font-bold text-white">{Data.DiscountItem.heading}</h3>
-         <p className="md:text-xl text-lg text-white">{Data.DiscountItem.description}</p>
+         <h3 className="md:text-5xl text-2xl font-bold text-white">{Data.DiscountItem.heading}</h3>
+         <p className="md:text-xl text-md text-white">{Data.DiscountItem.description}</p>
         <div>
-         <Button className="my-6 bg-white" />
+         <Button className="md:my-6 my-3 bg-white" />
         </div>        
         </div>
       </div>
@@ -175,14 +175,14 @@ export default function MainBanner(){
 
     {/* Second-Banner-section */}
 
-    <section className="container bg-gray-300">
-          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 md:h-120 w-full">
+        <section className="container bg-violet-500">
+          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 md:h-130 w-full">
              <div className="w-full md:mt-35 mt-5">
-              <h2 className="md:text-7xl text-3xl font-bold mask-b-from-slate-100 ">
+              <h2 className="md:text-7xl text-3xl font-bold  text-white">
                 {Data.NewArrivalBanner.heading}
               </h2>
               {Data.NewArrivalBanner.description.map((line, index) => (
-                <p key={index}className="md:text-xl text-sm">{line}</p>
+                <p key={index} className="md:text-xl text-sm text-white">{line}</p>
               ))} 
               <div>
                 <Button className="md:mt-15 mt-3 bg-white text-black hover:bg-amber-300 hover:rounded-2xl"/>
@@ -193,26 +193,29 @@ export default function MainBanner(){
               height={500}
               width={500}
               className="object-contain"/>
-            </div>
-           </div>
-    </section>
+            </div> 
+          </div>
+        </section>
 
     {/* Category-section */}
 
     <section className="container md:px-28 px-6 pt-10 pb-20 ">
-        <div className="category-heading">
-          <h3 className="md:text-5xl text-2xl font-bold mask-b-from-slate-100">Category</h3>
+        <div className="category-heading flex flex-col items-center">
+          <h3 className="md:text-5xl text-2xl text-center font-bold mask-b-from-slate-100">Our Product's Category</h3>
+          <p className="md:mt-6 mt-3 md:text-xl text-sm text-gray-700">“From design to delivery, every product reflects our commitment to quality.</p>
+          <p className="md:text-xl text-sm text-gray-700">durability, and customer satisfaction—because you deserve products that truly fit your lifestyle.”</p>
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-10">
+        <div className="grid md:grid-cols-5 grid-cols-3 gap-6 mt-10 items-center w-full ">
           {Data.CategoryItem.map((items) => (
-            <div key={items.id} className="w-full relative md:h-86 h-60 border border-gray-50 backdrop-blur-sm
-             overflow-hidden bg-white hover:scale-105 transition-transform duration-300 shadow-xl">
+            <div key={items.id} className="w-full relative md:h-86 h-35 border border-gray-50 backdrop-blur-sm
+             overflow-hidden hover:scale-105 transition-transform duration-300">
               <Image src={items.image} alt="category-image"
-              height={400}
-              width={400}
-              className="object-cover w-full h-60 "
+               fill
+               unoptimized
+              className="object-cover w-full md:h-60 h-40 relative rounded-full"
               />
-              <h3 className="text-xl font-semibold text-gray-800 text-center py-8 tracking-wide">{items.title}</h3>
+              <h3 className="absolute inset-0 z-10 flex items-center justify-center
+              md:text-2xl text-md font-semibold text-white text-center">{items.title}</h3>
             </div>
           ))}
         </div>
