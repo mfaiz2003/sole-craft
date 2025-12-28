@@ -200,7 +200,7 @@ export default function MainBanner(){
         </div>
         <div className="grid md:grid-cols-5 grid-cols-3 gap-6 mt-10 items-center w-full ">
           {Data.CategoryItem.map((items) => (
-            <div key={items.id} className="w-full relative md:h-76 h-35 border border-gray-50 backdrop-blur-sm
+            <div key={items.id} className="w-full relative md:h-76 h-30 border border-gray-50 backdrop-blur-sm
              overflow-hidden hover:scale-105 transition-transform duration-300">
               <Image src={items.image} alt="category-image"
                fill
