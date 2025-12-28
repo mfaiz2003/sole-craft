@@ -91,13 +91,13 @@
       },
       {
         "id": 2,
-        "image": "/assets/best-sell-jordan1.png",
+        "image": "/assets/puma-1.jpg",
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       },
       {
         "id": 3,
-        "image": "/assets/best-sell-jordan1.png",
+        "image": "/assets/redtape-1.jpg",
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       },
@@ -174,7 +174,7 @@
   "DiscountItem":{
     "description": "Grab 30% Discount on selected items",
     "heading": "Sale is Live",
-    "image": "/assets/dis-banner.png"
+    "image": "/assets/dis-image.jpg"
   },
 
   "NikeItem":{
