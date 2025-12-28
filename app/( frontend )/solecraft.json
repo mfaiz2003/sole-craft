@@ -85,7 +85,7 @@
     "BestsellItem":[
       {
         "id": 1,
-        "image": "/assets/best-sell-jordan1.png",
+        "image": "/assets/nike-1.jpg",
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       },
@@ -103,17 +103,17 @@
       },
       {
         "id": 4,
-        "image": "/assets/best-sell-jordan1.png",
+        "image": "/assets/addi-1.jpg",
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       }
     ],
 
     "NewArrivalBanner":{
-      "image": "/assets/second-banner.jpg",
+      "image": "/assets/camp-1.png",
       "heading": "New Arrivals",
       "description": ["Discover the latest trends curated just for you.", 
-                     "Fresh styles added this week!"]
+      "Fresh styles added this week!"]
     },
 
   "TestimonialItem": [

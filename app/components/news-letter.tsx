@@ -30,7 +30,7 @@ export default function NewsLetter() {
             className="border px-4 py-2 w-auto"
           />
 
-          <button type="submit" className="border px-6 py-2 bg-black text-white">
+          <button type="submit" className="border px-6 py-2 bg-violet-500 text-white">
             Submit
           </button>
         </form>

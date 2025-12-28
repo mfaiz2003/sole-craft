@@ -32,9 +32,9 @@ export default function MainBanner(){
     <>  
     
       <section className="container min-h-screen">
-      <div className="bg-violet-500 relative">
+      {/* <div className="bg-violet-500 relative">
         <Header/>
-      </div>
+      </div> */}
 
         <div className="flex flex-col md:grid md:grid-cols-2 h-full">
            <div className="relative min-h-[50vh] md:h-screen overflow-hidden">
@@ -75,14 +75,14 @@ export default function MainBanner(){
             </div>
           ))}
         </div>
-        <div className="text-center font-bold md:text-5xl text-3xl md:mt-10 mt-5">
+        <div className="text-center text-stone-700 font-bold md:text-5xl text-3xl md:mt-10 mt-5">
           <h3>Shop By Brands</h3>
         </div>
 
         <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:py-10 md:pt-15">
         <div className="py-5 w-auto">
           <h5 className="md:text-2xl text-lg text-gray-700 ">Our Trending shoe</h5>
-          <h3 className=" font-bold md:text-6xl text-4xl">Most Popular<br /> Products</h3>
+          <h3 className=" font-bold md:text-6xl text-4xl text-stone-700">Most Popular<br /> Products</h3>
           <p className="md:text-2xl text-lg text-gray-700">Top trending products everyone’s buying</p>
           <Button onClick={() => router.push ("/nike")} className="md:mt-10 mt-5 text-white"/>
         </div>
@@ -90,7 +90,7 @@ export default function MainBanner(){
           {Data.TrendingItem.map((items) => (
             <div key={items.id} className="border border-gray-300 overflow-hidden rounded-xl
              text-center shadow-xl hover:scale-110 hover:transition-transform duration-500 md:py-0 py-2">
-           <div className="relative md:h-64 h-36 w-full">
+            <div className="relative md:h-64 h-36 w-full">
               <Image
                 src={items.image}
                 alt="puma-image"
@@ -99,7 +99,7 @@ export default function MainBanner(){
                 className="object-cover"
               />
             </div>
-            <div className="md:text-xl text-lg font-bold ">
+            <div className="md:text-xl text-lg font-bold bg-violet-500">
               <p>{items.about}</p>
             </div>
           </div>
@@ -111,13 +111,18 @@ export default function MainBanner(){
     {/* Discount section */}
 
     <section className="mt-10">
-        <div className="relative h-[300px] md:h-[350px] w-full">
+      <div className="grid md:grid-cols-[60%_40%] grid-cols-2">
+        <div className="relative h-[250px] md:h-[350px] w-full">
           <Image src={Data.DiscountItem.image} alt="Second-Banner" 
            fill
            unoptimized
           className="object-cover"
           />
         </div>
+        <div className="bg-stone-500">
+
+        </div>
+      </div>   
     </section>
 
 
@@ -125,7 +130,7 @@ export default function MainBanner(){
       
       <section className="container py-15 ">
         <div className="relative">
-        <h2 className="text-center md:text-5xl text-2xl font-bold ">
+        <h2 className="text-center md:text-5xl text-2xl font-bold text-stone-700">
           Best Selling Catalogue
         </h2>      
         <Gender className="flex justify-center mt" />      
@@ -163,8 +168,8 @@ export default function MainBanner(){
 
     {/* Second-Banner-section */}
 
-        <section className="container bg-violet-500">
-          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 md:h-130 w-full">
+        <section className="container bg-stone-700">
+          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 md:h-120 w-full">
              <div className="w-full md:mt-35 mt-5">
               <h2 className="md:text-7xl text-3xl font-bold  text-white">
                 {Data.NewArrivalBanner.heading}
@@ -189,7 +194,7 @@ export default function MainBanner(){
 
     <section className="container md:px-28 px-6 pt-10 pb-20 ">
         <div className="category-heading flex flex-col text-center">
-          <h3 className="md:text-5xl text-2xl font-bold">Our Product's Category</h3>
+          <h3 className="md:text-5xl text-2xl font-bold text-stone-700">Our Product's Category</h3>
           <p className="md:mt-6 mt-3 md:text-lg text-sm text-gray-700">“From design to delivery, every product reflects our commitment to quality.</p>
           <p className="md:text-lg text-sm text-gray-700">durability, and customer satisfaction—because you deserve products that truly fit your lifestyle.”</p>
         </div>
@@ -214,7 +219,7 @@ export default function MainBanner(){
 
     <section className="container pb-15">
       <div className="mb-10 text-center px-6">
-        <h4 className="md:text-5xl text-2xl font-bold">What's Our Customers Say</h4>
+        <h4 className="md:text-5xl text-2xl font-bold text-stone-700">What's Our Customers Say</h4>
         <p className="mt-5 md:text-lg text-sm text-gray-700">"Thousands of happy customers, countless real experiences. Our reviews speak for the quality<br />
         reliability, and seamless shopping experience we promise with every order"</p>
       </div>
@@ -225,7 +230,7 @@ export default function MainBanner(){
 
     {/* news-letter section */}
       
-      <section className="bg-gray-400">
+      <section className="bg-stone-700">
         <div>
           <NewsLetter />
         </div>
