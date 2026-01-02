@@ -1,18 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import Data from "../solecraft.json";
-import {
-  Button,
-  Header,
-  Gender,
-  Carousel,
-  NewsLetter
-} from "@/app/components";
-import Snowfall from "react-snowfall";
-
+import Data from "@/app/data/solecraft.json";
+import Category from "@/app/components/category";
+import { Button } from "@/app/components";
 
 export default function MainBanner(){
   const images = Data.BannerItem.images; 
@@ -26,43 +18,72 @@ export default function MainBanner(){
     return () => clearInterval(interval);
   }, [images]);
 
-  const router = useRouter();
+
 
     return(
     <>  
     
-      <section className="container min-h-screen">
-      {/* <div className="bg-violet-500 relative">
-        <Header/>
-      </div> */}
-
-        <div className="flex flex-col md:grid md:grid-cols-2 h-full">
-           <div className="relative min-h-[50vh] md:h-screen overflow-hidden">
-            <Snowfall color="black" />
-            <Image
-              src={images[index]}
-              alt="Banner Image"
-              fill
-              unoptimized
-              className="object-cover"
-            />
-          </div>
-          <div className="md:px-28 px-6 min-h-[50vh] md:h-auto flex flex-col justify-center">
-            {Data.BannerItem.description.map((line, index) => (
-              <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
-            ))}
-            {Data.BannerItem.subdescription.map((line, index) => (
-              <p key={index} className="md:text-xl text-gray-700">{line}</p>
-            ))}
-          </div>
+      <section className="min-h-screen grid md:grid-cols-[60%_40%] grid-cols-1">
+        <div className="relative min-h-[40vh] md:h-screen overflow-hidden">
+          <Image
+            src={images[index]}
+            alt="Banner Image"
+            fill
+            unoptimized
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <div className="flex flex-col justify-center md:px-16 px-4">
+          {Data.BannerItem.description.map((line, index) => (
+            <h3 key={index} className="md:text-8xl text-6xl font-bold">{line}</h3>
+          ))}
+          {Data.BannerItem.subdescription.map((line, index) => (
+            <p key={index} className="md:text-xl text-gray-700">{line}</p>
+          ))}
         </div>
       </section>
 
 
-      {/* support & Brand section */}
+      <section className="bg-black relative px-6 md:px-20 pt-25 pb-15">
+        <div className="absolute pointer-events-none">
+          <h1 className="md:text-9xl text-6xl font-bold ">
+            Explore Our <br /> Brands
+          </h1>
+        </div>
+        <div className="relative z-10 grid md:grid-cols-[40%_60%] grid-cols-1">
+          <div className="flex items-center">
+            <h4 className="text-white md:text-5xl text-xl font-bold">
+              Discover the World’s Most <br /> Loved Shoe Brands
+            </h4>
+          </div>
+          <div>
+            <p className="text-white text-xl max-w-xl">
+              We bring together the world’s most trusted and stylish shoe brands,
+              crafted for comfort, durability, and timeless design.
+            </p>
+            <div className="grid grid-cols-3 gap-5 mt-12">
+              {Data.TrendingItem.map((items) => (
+                <div key={items.id} className="overflow-hidden rounded-xl text-center hover:scale-110">
+                  <div className="relative md:h-64 h-36 w-full">
+                    <Image
+                      src={items.image}
+                      alt="brand-image"
+                      fill
+                      unoptimized
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="md:text-xl text-lg font-bold bg-white py-2">
+                    {items.about}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section> 
-       <div className="grid md:grid-cols-6 grid-cols-3 gap-10 md:px-28 px-6 md:py-0 py-3 bg-black">
+      <section className="grid md:grid-cols-6 grid-cols-3 gap-10 px-6 md:py-5 py-3 bg-black">
           {Data.BrandItem.map((items) => (
             <div key={items.id} className="flex justify-center items-center ">
               <Image
@@ -74,70 +95,36 @@ export default function MainBanner(){
               />
             </div>
           ))}
-        </div>
-        <div className="text-center text-stone-700 font-bold md:text-5xl text-3xl md:mt-10 mt-5">
-          <h3>Shop By Brands</h3>
-        </div>
-
-        <div className="grid md:grid-cols-[40%_60%] md:px-28 px-4 md:py-10 md:pt-15">
-        <div className="py-5 w-auto">
-          <h5 className="md:text-2xl text-lg text-gray-700 ">Our Trending shoe</h5>
-          <h3 className=" font-bold md:text-6xl text-4xl text-stone-700">Most Popular<br /> Products</h3>
-          <p className="md:text-2xl text-lg text-gray-700">Top trending products everyone’s buying</p>
-          <Button onClick={() => router.push ("/nike")} className="md:mt-10 mt-5 text-white"/>
-        </div>
-        <div className="grid md:grid-cols-3 grid-cols-2 gap-4 w-full">
-          {Data.TrendingItem.map((items) => (
-            <div key={items.id} className="border border-gray-300 overflow-hidden rounded-xl
-             text-center shadow-xl hover:scale-110 hover:transition-transform duration-500 md:py-0 py-2">
-            <div className="relative md:h-64 h-36 w-full">
-              <Image
-                src={items.image}
-                alt="puma-image"
-                fill
-                unoptimized
-                className="object-cover"
-              />
-            </div>
-            <div className="md:text-xl text-lg font-bold bg-violet-500">
-              <p>{items.about}</p>
-            </div>
-          </div>
-          ))}  
-        </div>
-      </div>
       </section>
 
-    {/* Discount section */}
+      <section>
+        <Category />
+      </section>
+     
+      <section className="">
+        <div className="grid md:grid-cols-[60%_40%] grid-cols-2">
+          <div className="relative h-[250px] md:h-[350px] w-full">
+            <Image src={Data.DiscountItem.image} alt="Second-Banner" 
+             fill
+             unoptimized
+            className="object-cover"
+            />
+          </div>
+            <div className="bg-stone-400">
+          </div>
+        </div>   
+      </section>
 
-    <section className="mt-10">
-      <div className="grid md:grid-cols-[60%_40%] grid-cols-2">
-        <div className="relative h-[250px] md:h-[350px] w-full">
-          <Image src={Data.DiscountItem.image} alt="Second-Banner" 
-           fill
-           unoptimized
-          className="object-cover"
-          />
-        </div>
-        <div className="bg-stone-500">
-
-        </div>
-      </div>   
-    </section>
-
-
-    {/* Best-selling section  */}
-      
-      <section className="container py-15 ">
+      <section className="container md:py-15 py-8 ">
         <div className="relative">
         <h2 className="text-center md:text-5xl text-2xl font-bold text-stone-700">
           Best Selling Catalogue
         </h2>      
-        <Gender className="flex justify-center mt" />      
-        <div className="grid md:grid-cols-4 grid-cols-2 gap-6 mt-10 md:px-28 px-6 relative z-10">
+      
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-6 md:mt-10 md:px-28 px-6 relative z-10">
           {Data.BestsellItem.map((items) => (
             <div key={items.id} className="border border-gray-300 shadow-xl overflow-hidden
-              text-center mt-5 hover:scale-110 hover:transition-transform duration-500 rounded-xl">
+              text-center mt-5 hover:scale-110 rounded-xl">
               <div className="relative h-30 md:h-64  overflow-hidden">
                 <Image
                   src={items.image}
@@ -161,80 +148,35 @@ export default function MainBanner(){
           ))}
         </div>
         </div>
-        <div className="flex justify-center mt-15 text-white">
-          <Button className=""/>
+        <div className="flex justify-center text-white">
         </div>
       </section>
 
-    {/* Second-Banner-section */}
-
-        <section className="container bg-stone-700">
-          <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 md:h-120 w-full">
-             <div className="w-full md:mt-35 mt-5">
-              <h2 className="md:text-7xl text-3xl font-bold  text-white">
-                {Data.NewArrivalBanner.heading}
-              </h2>
-              {Data.NewArrivalBanner.description.map((line, index) => (
-                <p key={index} className="md:text-xl text-sm text-white">{line}</p>
-              ))} 
-              <div>
-                <Button className="md:mt-15 mt-3 bg-white text-black hover:bg-amber-300 hover:rounded-2xl"/>
-              </div>
+      <section className="container bg-yellow-100">
+        <div className="grid md:grid-cols-2 grid-cols-1 md:px-28 px-6 md:h-120 w-full">
+           <div className="w-full md:mt-35 mt-5">
+            <h2 className="md:text-7xl text-3xl font-bold">
+              {Data.NewArrivalBanner.heading}
+            </h2>
+            {Data.NewArrivalBanner.description.map((line, index) => (
+              <p key={index} className="md:text-xl text-sm ">{line}</p>
+            ))} 
+            <div>
+              <Button className="md:mt-15 mt-3 text-black bg-amber-300 hover:rounded-2xl"/>
             </div>
-            <div className="md:mt-0 mt-5 items-center flex justify-center md:py-8">
-              <Image src={Data.NikeItem.image3} alt="arrival-image" 
-              height={500}
-              width={500}
-              className="object-contain"/>
-            </div> 
           </div>
-        </section>
-
-    {/* Category-section */}
-
-    <section className="container md:px-28 px-6 pt-10 pb-20 ">
-        <div className="category-heading flex flex-col text-center">
-          <h3 className="md:text-5xl text-2xl font-bold text-stone-700">Our Product's Category</h3>
-          <p className="md:mt-6 mt-3 md:text-lg text-sm text-gray-700">“From design to delivery, every product reflects our commitment to quality.</p>
-          <p className="md:text-lg text-sm text-gray-700">durability, and customer satisfaction—because you deserve products that truly fit your lifestyle.”</p>
-        </div>
-        <div className="grid md:grid-cols-5 grid-cols-3 gap-6 mt-10 items-center w-full ">
-          {Data.CategoryItem.map((items) => (
-            <div key={items.id} className="w-full relative md:h-76 h-30 border border-gray-50 backdrop-blur-sm
-             overflow-hidden hover:scale-105 transition-transform duration-300">
-              <Image src={items.image} alt="category-image"
-               fill
-               unoptimized
-              className="object-cover w-full md:h-60 h-40 relative rounded-full"
-              />
-              <h3 className="absolute inset-0 z-10 flex items-center justify-center
-              md:text-2xl text-md font-semibold text-white text-center">{items.title}</h3>
-            </div>
-          ))}
-        </div>
-    </section>
-    
-
-    {/* Testimonial-section */}
-
-    <section className="container pb-15">
-      <div className="mb-10 text-center px-6">
-        <h4 className="md:text-5xl text-2xl font-bold text-stone-700">What's Our Customers Say</h4>
-        <p className="mt-5 md:text-lg text-sm text-gray-700">"Thousands of happy customers, countless real experiences. Our reviews speak for the quality<br />
-        reliability, and seamless shopping experience we promise with every order"</p>
-      </div>
-      <div className="w-full md:px-28 px-6">
-        <Carousel items={Data.TestimonialItem} />
-      </div>
-    </section>
-
-    {/* news-letter section */}
-      
-      <section className="bg-stone-700">
-        <div>
-          <NewsLetter />
+          <div className="md:mt-0 mt-5 relative flex item center bg-stone-400 min-h-[200px] md:min-h-full">
+            <Image src={Data.NikeItem.image3} alt="arrival-image" 
+            fill
+            className="object-contain"/>
+          </div> 
         </div>
       </section>
+
+
+
+
+
     </>   
     );
 }

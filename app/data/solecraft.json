@@ -12,9 +12,11 @@
         "images": [
             "/assets/BannerImg.jpg",
             "/assets/BannerImg7.png",
-            "/assets/BannerImg4.png"
+            "./assets/main-bnr2.jpg"
         ]
     },
+
+
 
     "SupportItem":[
     {
@@ -67,17 +69,17 @@
     "TrendingItem": [
       {
         "id": 1,
-        "image": "/assets/puma.png",
+        "image": "/assets/puma-1.jpg",
          "about": "Puma"
       },
       {
         "id": 2,
-        "image": "/assets/nike2.png",
+        "image": "/assets/redtape-1.jpg",
          "about": "Nike"
       },
       {
         "id": 3,
-        "image": "/assets/puma.png",
+        "image": "/assets/addi-1.jpg",
         "about": "Puma"
       }
     ],
