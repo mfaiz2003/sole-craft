@@ -1,60 +1,60 @@
 "use client";
 
-import Data from "../solecraft.json";
+import Data from "@/app/data/solecraft.json";
 import Image from "next/image";
 import { Header } from "@/app/components";
 import { useState } from "react";
 
-export default function Nike(){
-   const [activeImage, setActiveImage] = useState(
+export default function Nike() {
+  const [activeImage, setActiveImage] = useState(
     Data.ProductImage[0].image
-   );
-    return(
-    
-        <>
-        
-        {/* Banner section */}
+  );
+  return (
 
-        <section className="container">
-          <div className="bg-black">
-            <Header/>
+    <>
+
+      {/* Banner section */}
+
+      <section className="container">
+        <div className="bg-black">
+          <Header />
+        </div>
+        <div className="grid md:grid-cols-2 grid-cols-1 md:h-[50vh] h-[50vh] bg-black md:py-0 py-15">
+          <div className="relative overflow-hidden">
+            <Image src={Data.NikeItem.image2}
+              alt="Banner-Image2"
+              fill
+              unoptimized
+              className="object-contain" />
           </div>
-            <div className="grid md:grid-cols-2 grid-cols-1 md:h-[50vh] h-[50vh] bg-black md:py-0 py-15">
-              <div className="relative overflow-hidden">
-                <Image src={Data.NikeItem.image2}
-                alt="Banner-Image2"
-                fill
-                unoptimized
-                className="object-contain"/>
-              </div>
-              <div className="relative flex items-center justify-center text-white md:text-[200px] 
+          <div className="relative flex items-center justify-center text-white md:text-[200px] 
               text-9xl font-bold italic">
-                <h1>Nike</h1>
+            <h1>Nike</h1>
+          </div>
+        </div>
+      </section>
+
+      {/* brand section */}
+
+      <section className="md:py-15 py-10 md:px-28">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] gap-6">
+            <div className="flex justify-center md:justify-start">
+              <div className="flex md:flex-col gap-4 py-6 px-2 rounded-md max-w-full">
+                {Data.ProductImage.map((items) => (
+                  <button key={items.id} onClick={() => setActiveImage(items.image)}
+                    className={`relative aspect-square w-20 md:w-24 rounded-md overflow-hidden border transition
+                        ${activeImage === items.image ? "border-black" : "border-gray-300 hover:border-gray-500"}`}>
+                    <Image
+                      src={items.image}
+                      alt="product-thumbnail"
+                      fill
+                      unoptimized
+                      className="object-contain" />
+                  </button>
+                ))}
               </div>
             </div>
-        </section> 
-
-        {/* brand section */}
-
-        <section className="md:py-15 py-10 md:px-28">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] gap-6">
-              <div className="flex justify-center md:justify-start">
-                <div className="flex md:flex-col gap-4 py-6 px-2 rounded-md max-w-full">
-                  {Data.ProductImage.map((items) => (
-                    <button key={items.id} onClick={() => setActiveImage(items.image)}
-                      className={`relative aspect-square w-20 md:w-24 rounded-md overflow-hidden border transition
-                        ${activeImage === items.image ? "border-black" : "border-gray-300 hover:border-gray-500"}`}>
-                      <Image
-                        src={items.image}
-                        alt="product-thumbnail"
-                        fill
-                        unoptimized
-                        className="object-contain"/>
-                    </button>
-                  ))}
-                </div>
-              </div>
             <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
               <Image
                 src={activeImage}
@@ -80,16 +80,16 @@ export default function Nike(){
                 Add to Cart
               </button>
             </div>
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Review section */}
+      {/* Review section */}
 
-        <section>
-          <div></div>
-        </section>
+      <section>
+        <div></div>
+      </section>
 
-        </>
-    );
+    </>
+  );
 }
