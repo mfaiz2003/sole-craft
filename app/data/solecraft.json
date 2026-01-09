@@ -1,45 +1,41 @@
 {
-    "BannerItem":{
-        "description": [
-            "Find Your",
-            "Sole Mate",
-            "With Us"
-        ],
-        "subdescription": [
-            "Walk your path with unmatched comfort, bold style", 
-            "and limitless confidence"
-        ],
-        "images": [
-            "/assets/BannerImg.jpg",
-            "/assets/BannerImg7.png",
-            "./assets/main-bnr2.jpg"
-        ]
-    },
-
-
-
-    "SupportItem":[
+  "BannerItem": {
+    "description": [
+      "Find Your",
+      "Sole Mate",
+      "With Us"
+    ],
+    "subdescription": [
+      "Walk your path with unmatched comfort, bold style",
+      "and limitless confidence"
+    ],
+    "images": [
+      "/assets/BannerImg.jpg",
+      "/assets/BannerImg7.png",
+      "./assets/main-bnr2.jpg"
+    ]
+  },
+  "SupportItem": [
     {
       "id": 1,
       "description": "Best Customer Support",
       "subdescription": "Instant Access To React Support",
-      "image": "/assets/telephone-icon.webp"
+      "image": "/assets/tele-icon.png"
     },
     {
       "id": 2,
       "description": "Free Shipping And Return",
       "subdescription": "All India Shipping Available",
-      "image": "/assets/shopping-bag.png"
+      "image": "/assets/return-icon.png"
     },
     {
       "id": 3,
       "description": "All Type Payment Acceptable",
       "subdescription": "Get Reward For Paying with Card",
-      "image": "/assets/cards-icon.png"
+      "image": "/assets/card-icon.png"
     }
-    ], 
-    
-    "BrandItem":[
+  ],
+  "BrandItem": [
     {
       "id": 1,
       "image": "/assets/puma-logo.jpg"
@@ -52,7 +48,7 @@
       "id": 3,
       "image": "/assets/redtape-logo2.png"
     },
-      {
+    {
       "id": 4,
       "image": "/assets/adidas-logo1.png"
     },
@@ -64,27 +60,30 @@
       "id": 6,
       "image": "/assets/asics-logo.png"
     }
+  ],
+  "TrendingItem": [
+    {
+      "id": 1,
+      "image": "/assets/puma-1.jpg",
+      "about": "Puma"
+    },
+    {
+      "id": 2,
+      "image": "/assets/redtape-1.jpg",
+      "about": "Nike"
+    },
+    {
+      "id": 3,
+      "image": "/assets/addi-1.jpg",
+      "about": "Puma"
+    }
+  ],
+  "Bestsell": {
+    "description": [
+      "Discover our best selling products, loved by customers for their quality, comfort, and style",
+      "These top picks are the most trusted choices, tried and approved by thousands of happy buyers"
     ],
-    
-    "TrendingItem": [
-      {
-        "id": 1,
-        "image": "/assets/puma-1.jpg",
-         "about": "Puma"
-      },
-      {
-        "id": 2,
-        "image": "/assets/redtape-1.jpg",
-         "about": "Nike"
-      },
-      {
-        "id": 3,
-        "image": "/assets/addi-1.jpg",
-        "about": "Puma"
-      }
-    ],
-
-    "BestsellItem":[
+    "items": [
       {
         "id": 1,
         "image": "/assets/nike-1.jpg",
@@ -109,15 +108,16 @@
         "about": "Nike Dunk Low Retro SE",
         "rate": "Rs.4999"
       }
-    ],
-
-    "NewArrivalBanner":{
-      "image": "/assets/camp-1.png",
-      "heading": "New Arrivals",
-      "description": ["Discover the latest trends curated just for you.", 
-      "Fresh styles added this week!"]
-    },
-
+    ]
+  },
+  "NewArrivalBanner": {
+    "image": "/assets/camp-1.png",
+    "heading": "New Arrivals",
+    "description": [
+      "Discover the latest trends curated just for you.",
+      "Fresh styles added this week!"
+    ]
+  },
   "TestimonialItem": [
     {
       "id": 1,
@@ -144,7 +144,6 @@
       "image": "/assets/testimonial-4.jpg"
     }
   ],
-
   "CategoryItem": [
     {
       "id": 1,
@@ -172,20 +171,17 @@
       "title": "Party Wear"
     }
   ],
-
-  "DiscountItem":{
+  "DiscountItem": {
     "description": "Grab 30% Discount on selected items",
     "heading": "Sale is Live",
-    "image": "/assets/dis-image.jpg"
+    "image": "/assets/dis-banner.png"
   },
-
-  "NikeItem":{
+  "NikeItem": {
     "image1": "/assets/category-loafers.jpg",
     "image2": "/assets/nike-logo1.png",
-    "image3":  "/assets/nike-banner.png"
+    "image3": "/assets/nike-banner.png"
   },
-
-  "ProductImage":[
+  "ProductImage": [
     {
       "id": 1,
       "image": "/assets/nike-banner.png"
@@ -207,8 +203,7 @@
       "image": "/assets/bannershoes.png"
     }
   ],
-
-  "cateo":[
+  "cateo": [
     {
       "id": 1,
       "image": "/assets/cate-1.png"
@@ -222,5 +217,4 @@
       "image": "/assets/cate-3.png"
     }
   ]
-
 }
