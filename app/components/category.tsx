@@ -7,7 +7,7 @@ type CategoryProps = {
 
 export default function Category({ className }: CategoryProps) {
   return (
-    <section className="container md:py-15 py-10 md:px-10 px-6">
+    <section className="container md:py-15 py-10 md:px-10 px-3">
       <div className="border border-gray-400 rounded-3xl md:py-10 py-5 md:px-10 px-5">
         <div className="flex flex-col md:text-center">
           <h3 className="md:text-5xl text-3xl font-bold text-[#f0835b]">Our Product's Category</h3>

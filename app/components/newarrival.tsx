@@ -17,7 +17,7 @@ export default function NewArrival() {
     }, [images1]);
 
     return (
-        <section className="container md:py-15 py-10 md:px-20 px-6 bg-[#f0835b]">
+        <section className="container md:py-15 py-10 md:px-20 px-3 bg-[#f0835b]">
             <div className="grid md:grid-cols-2 grid-cols-1 md:h-110 w-full border border-white
                 rounded-3xl">
                 <div className="w-full flex flex-col justify-center md:pl-10 pl-5 md:mt-0 mt-5">

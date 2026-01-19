@@ -61,7 +61,7 @@ export default function MainBanner() {
         ))}
       </section>
 
-      <section className="bg-[#f0835b] relative px-6 md:px-20 md:py-15 py-8">
+      <section className="bg-[#f0835b] relative px-3 md:px-20 md:py-15 py-8">
         <div className="absolute pointer-events-none">
           <h1 className="md:text-9xl text-8xl font-bold text-white opacity-25">
             Explore Our <br /> Brands
@@ -110,7 +110,7 @@ export default function MainBanner() {
 
       <section className="container md:pb-15 pb-8 ">
         <div className="relative">
-          <div className="flex flex-col text-center md:px-0 px-6">
+          <div className="flex flex-col text-center md:px-0 px-3">
             <h2 className="md:text-5xl text-3xl font-bold text-[#f0835b]">
               Best Selling Catalogue
             </h2>
@@ -118,7 +118,7 @@ export default function MainBanner() {
               <p className="md:text-lg text-gray-700 md:mt-6 mt-3">{Data.Bestsell.description}</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-6 md:mt-10 md:px-28 px-6 relative z-10">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-6 md:mt-10 md:px-28 px-3 relative z-10">
             {Data.Bestsell.items.map((items) => (
               <div key={items.id} className="border border-gray-300 shadow-xl overflow-hidden
               text-center mt-5 hover:scale-110 rounded-xl">
@@ -156,17 +156,17 @@ export default function MainBanner() {
 
 
       <section className="container py-15">
-        <div className="mb-10 text-center px-6">
+        <div className="mb-10 text-center md:px-6 px-3">
           <h4 className="md:text-5xl text-3xl font-bold text-[#f0835b]">What's Our Customers Say</h4>
           <p className="mt-5 md:text-lg  text-gray-700">"Thousands of happy customers, countless real experiences. Our reviews speak for the quality<br />
             reliability, and seamless shopping experience we promise with every order"</p>
         </div>
-        <div className="w-full md:px-28 px-6">
+        <div className="w-full md:px-28 px-3">
           <Carousel items={Data.TestimonialItem} />
         </div>
       </section>
 
-      <section className="md:px-28 px-6 md:py-5">
+      <section className="md:px-28 px-3 md:py-5">
         <div className="text-center md:text-5xl text-3xl font-bold text-[#f0835b]">
           <h2>Why Choose Us !</h2>
         </div>
