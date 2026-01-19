@@ -2,7 +2,6 @@ import Data from "@/app/data/solecraft.json";
 import Image from "next/image";
 import Button from "./button";
 import { useState, useEffect } from "react";
-import { data } from "react-router-dom";
 
 export default function NewArrival() {
 
