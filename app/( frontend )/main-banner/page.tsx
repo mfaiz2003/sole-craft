@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Data from "@/app/data/solecraft.json";
 import Category from "@/app/components/category";
@@ -21,6 +22,7 @@ export default function MainBanner() {
   }, [images]);
 
 
+  const router = useRouter();
 
   return (
     <>
@@ -59,9 +61,9 @@ export default function MainBanner() {
         ))}
       </section>
 
-      <section className="bg-[#FF6820] relative px-6 md:px-20 py-15">
+      <section className="bg-[#f0835b] relative px-6 md:px-20 md:py-15 py-8">
         <div className="absolute pointer-events-none">
-          <h1 className="md:text-9xl text-8xl font-bold text-white opacity-15">
+          <h1 className="md:text-9xl text-8xl font-bold text-white opacity-25">
             Explore Our <br /> Brands
           </h1>
         </div>
@@ -70,10 +72,11 @@ export default function MainBanner() {
             <h4 className="text-white md:text-5xl text-xl font-bold">
               Discover the World’s Most <br /> Loved Shoe Brands
             </h4>
-            <Button className="md:mt-15 mt-5 text-black bg-amber-300 hover:rounded-2xl" />
+            <Button onClick={() => router.push("/nike")}
+              className="md:mt-15 mt-5 text-black bg-amber-300 hover:rounded-2xl" />
           </div>
           <div className="flex flex-col md:mt-0 mt-5">
-            <p className="text-white text-xl max-w-xl">
+            <p className="text-white md:text-xl max-w-xl">
               We bring together the world’s most trusted and stylish shoe brands,
               crafted for comfort, durability, and timeless design.
             </p>
@@ -89,7 +92,7 @@ export default function MainBanner() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="md:text-xl text-lg font-bold bg-white py-2">
+                  <div className="md:text-xl font-bold bg-white md:py-5 py-2">
                     {items.about}
                   </div>
                 </div>
@@ -108,12 +111,12 @@ export default function MainBanner() {
       <section className="container md:pb-15 pb-8 ">
         <div className="relative">
           <div className="flex flex-col text-center md:px-0 px-6">
-            <h2 className="md:text-5xl text-3xl font-bold text-stone-700">
+            <h2 className="md:text-5xl text-3xl font-bold text-[#f0835b]">
               Best Selling Catalogue
             </h2>
-            {Data.Bestsell.description.map((line, index) => (
-              <p key={index} className="md:text-lg text-sm text-gray-700">{line}</p>
-            ))}
+            <div>
+              <p className="md:text-lg text-gray-700 md:mt-6 mt-3">{Data.Bestsell.description}</p>
+            </div>
           </div>
           <div className="grid md:grid-cols-4 grid-cols-2 gap-6 md:mt-10 md:px-28 px-6 relative z-10">
             {Data.Bestsell.items.map((items) => (
@@ -151,10 +154,11 @@ export default function MainBanner() {
         <NewArrival />
       </section>
 
+
       <section className="container py-15">
         <div className="mb-10 text-center px-6">
-          <h4 className="md:text-5xl text-3xl font-bold text-stone-700">What's Our Customers Say</h4>
-          <p className="mt-5 md:text-lg text-sm text-gray-700">"Thousands of happy customers, countless real experiences. Our reviews speak for the quality<br />
+          <h4 className="md:text-5xl text-3xl font-bold text-[#f0835b]">What's Our Customers Say</h4>
+          <p className="mt-5 md:text-lg  text-gray-700">"Thousands of happy customers, countless real experiences. Our reviews speak for the quality<br />
             reliability, and seamless shopping experience we promise with every order"</p>
         </div>
         <div className="w-full md:px-28 px-6">
@@ -163,7 +167,7 @@ export default function MainBanner() {
       </section>
 
       <section className="md:px-28 px-6 md:py-5">
-        <div className="text-center md:text-5xl text-3xl font-bold text-stone-700">
+        <div className="text-center md:text-5xl text-3xl font-bold text-[#f0835b]">
           <h2>Why Choose Us !</h2>
         </div>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-6 md:mt-10 mt-5">
@@ -180,13 +184,15 @@ export default function MainBanner() {
                 />
               </div>
               <div>
-                <h4 className="text-orange-600 font-bold">{items.description}</h4>
+                <h4 className="font-bold">{items.description}</h4>
                 <p className="text-gray-700">{items.subdescription}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
+
+
 
 
 

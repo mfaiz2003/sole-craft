@@ -79,10 +79,7 @@
     }
   ],
   "Bestsell": {
-    "description": [
-      "Discover our best selling products, loved by customers for their quality, comfort, and style",
-      "These top picks are the most trusted choices, tried and approved by thousands of happy buyers"
-    ],
+    "description": "Discover our best selling products, loved by customers for their quality, comfort, and style",
     "items": [
       {
         "id": 1,
@@ -111,12 +108,12 @@
     ]
   },
   "NewArrivalBanner": {
-    "image": "/assets/camp-1.png",
     "heading": "New Arrivals",
     "description": [
       "Discover the latest trends curated just for you.",
       "Fresh styles added this week!"
-    ]
+    ],
+    "image": "/assets/nike-banner.png"
   },
   "TestimonialItem": [
     {
@@ -173,8 +170,7 @@
   ],
   "DiscountItem": {
     "description": "Grab 30% Discount on selected items",
-    "heading": "Sale is Live",
-    "image": "/assets/dis-banner.png"
+    "heading": "Sale is Live"
   },
   "NikeItem": {
     "image1": "/assets/category-loafers.jpg",
