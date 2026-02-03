@@ -7,6 +7,7 @@ import Data from "@/app/data/solecraft.json";
 import Category from "@/app/components/category";
 import { Button, Carousel } from "@/app/components";
 import NewArrival from "@/app/components/newarrival";
+import NikePage from "../nike/page";
 
 
 export default function MainBanner() {
@@ -146,7 +147,8 @@ export default function MainBanner() {
           </div>
         </div>
         <div className="flex justify-center text-white">
-          <Button className="md:mt-15 mt-10 text-black bg-amber-300 hover:rounded-2xl" />
+          <Button className="md:mt-15 mt-10 text-black bg-amber-300 hover:rounded-2xl"
+            onClick={() => router.push("/nike")} />
         </div>
       </section>
 
