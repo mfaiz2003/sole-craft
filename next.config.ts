@@ -13,16 +13,20 @@ const nextConfig: NextConfig = {
         hostname: "res.cloudinary.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "sole-craft-o32h.vercel.app",
+      },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "https://sole-craft-o32h.vercel.app/api/*",
-      },
-    ];
-  }
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/api/:path*",
+  //       destination: "sole-craft-o32h.vercel.app/api/:path*",
+  //     },
+  //   ];
+  // }
 };
 
 export default nextConfig;

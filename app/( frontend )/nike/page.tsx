@@ -32,8 +32,8 @@ export default function NikePage() {
       <div className="grid md:grid-cols-3 grid-cols-2 gap-4 justify-center md:px-20 px-4">
         {products.map((p) => (
           <div key={p._id} className="w-full border text-center">
-            <img src={p.image} alt={p.name} className="w-full h-38 object-cover" />
-            <div>
+            <img src={p.image} alt={p.name} className="w-full md:h-64 h-38 object-cover" />
+            <div className="md:h-38 h-24 overflow-hidden">
               <h6>{p.name}</h6>
               <p>Brand: {p.brand}</p>
               <p>Category: {p.category}</p>
