@@ -4,9 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Data from "@/app/data/solecraft.json";
-import Category from "@/app/components/category";
-import { Button, Carousel } from "@/app/components";
-import NewArrival from "@/app/components/newarrival";
+import { Button, Carousel, NewArrival, Category } from "@/app/components";
 import NikePage from "../nike/page";
 
 
