@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "https://sole-craft-o32h.vercel.app/api/:path*",
+        destination: "https://sole-craft-o32h.vercel.app/api/*",
       },
     ];
   }
